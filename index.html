@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Bullshit — Domain.com.au Valuation Tracker</title>
+    <meta name="description" content="Exposing how Domain.com.au changes their automated property valuations when properties are listed for sale. Independent evidence with before and after screenshots.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Property<span class="accent">Bullshit</span>.com</h1>
+            <p class="tagline">Exposing how Domain.com.au manipulates automated property valuations</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="explainer">
+            <h2>What's happening?</h2>
+            <p>
+                Domain.com.au provides automated property valuations that millions of Australians
+                rely on when making the biggest financial decisions of their lives. But there's a
+                problem: <strong>Domain changes their valuations to match listing prices when
+                properties go on the market.</strong>
+            </p>
+            <p>
+                We're documenting this by taking screenshots of Domain's property valuations
+                <em>before</em> properties are listed for sale, and comparing them with the
+                valuations shown <em>after</em> the listing goes live. The changes are often dramatic.
+            </p>
+            <div class="how-it-works">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div>
+                        <strong>We monitor</strong> properties across Gold Coast suburbs using
+                        Domain's public property profile pages.
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div>
+                        <strong>We capture</strong> their automated valuation estimate before any
+                        listing activity. This is what Domain tells the public the property is worth.
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div>
+                        <strong>We compare</strong> by recapturing the valuation after the property
+                        is listed for sale. In many cases, the "estimate" suddenly matches the
+                        listing price.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats" id="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="total-tracked">—</div>
+                <div class="stat-label">Properties Monitored</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-listed">—</div>
+                <div class="stat-label">Listings Detected</div>
+            </div>
+            <div class="stat-card highlight">
+                <div class="stat-number" id="total-changed">—</div>
+                <div class="stat-label">Valuations Changed on Listing</div>
+            </div>
+        </section>
+
+        <section class="comparisons" id="comparisons">
+            <h2>Recent Valuation Changes</h2>
+            <p class="section-note">Click any row to view the before &amp; after screenshots as evidence.</p>
+
+            <div class="table-wrap">
+                <table id="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Suburb</th>
+                            <th>Before Listing<br><small>Domain Estimate</small></th>
+                            <th>After Listing<br><small>Domain Estimate</small></th>
+                            <th>Change</th>
+                            <th>Evidence</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comparison-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="no-data" class="no-data" style="display:none;">
+                <p>No valuation changes captured yet. Monitoring is underway — check back soon.</p>
+            </div>
+        </section>
+
+        <section class="monitored" id="monitored-section">
+            <h2>Currently Monitoring</h2>
+            <p class="section-note">
+                These properties have baseline valuations recorded. When any of them are listed
+                for sale, we'll capture the updated valuation and add them to the comparison table above.
+            </p>
+            <div id="monitored-list" class="monitored-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>FAQ</h2>
+            <details>
+                <summary>Why does this matter?</summary>
+                <p>
+                    Domain's automated valuations are used by buyers, sellers, banks, and the
+                    media as indicators of what a property is worth. If these valuations are being
+                    adjusted to match listing prices, they are no longer independent estimates —
+                    they're just echoing what the agent wants to sell for. This misleads consumers
+                    into thinking their independent "data-driven" estimate confirms the asking price,
+                    when in reality it's the other way around.
+                </p>
+            </details>
+            <details>
+                <summary>How do you capture the data?</summary>
+                <p>
+                    We use automated screenshots of Domain.com.au property profile pages. Each
+                    screenshot is timestamped and stored as evidence. We capture the page before
+                    any listing activity, and again after the property is listed for sale. The
+                    screenshots are taken through Australian residential IP addresses and show
+                    exactly what any member of the public would see.
+                </p>
+            </details>
+            <details>
+                <summary>Is this legal?</summary>
+                <p>
+                    Yes. We are accessing publicly available web pages and documenting publicly
+                    displayed information for the purpose of consumer advocacy and public interest
+                    reporting. Domain's property profile pages are freely accessible to anyone
+                    with a web browser.
+                </p>
+            </details>
+            <details>
+                <summary>Who runs this?</summary>
+                <p>
+                    This project is run by independent property data researchers on the Gold Coast,
+                    Australia. We have no affiliation with any real estate agency, portal, or
+                    financial institution.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <!-- Screenshot Modal -->
+    <div class="modal" id="screenshot-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h3 id="modal-title">Before &amp; After</h3>
+            <div class="modal-body">
+                <div class="comparison-side">
+                    <h4>Before Listing</h4>
+                    <p class="capture-date" id="modal-before-date"></p>
+                    <div class="screenshot-container">
+                        <img id="modal-before-img" src="" alt="Before listing valuation">
+                    </div>
+                </div>
+                <div class="comparison-side">
+                    <h4>After Listing</h4>
+                    <p class="capture-date" id="modal-after-date"></p>
+                    <div class="screenshot-container">
+                        <img id="modal-after-img" src="" alt="After listing valuation">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>PropertyBullshit.com &mdash; Consumer advocacy through transparent data.</p>
+            <p class="disclaimer">
+                This site documents publicly available information from Domain.com.au for the
+                purpose of consumer advocacy. All screenshots are timestamped and unaltered.
+                "Domain" is a trademark of Domain Holdings Australia Limited. This site is not
+                affiliated with Domain.
+            </p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
