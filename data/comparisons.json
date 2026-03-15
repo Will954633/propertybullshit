@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-03-15T14:30:00+10:00",
+  "total_tracked": 2,
+  "total_with_changes": 2,
+  "comparisons": [
+    {
+      "address": "28 Federal Place, Robina, QLD 4226",
+      "suburb": "robina",
+      "slug": "28-federal-place-robina-qld-4226",
+      "listing_url": "https://www.domain.com.au/28-federal-place-robina-qld-4226-2020640700",
+      "listing_price": "Expressions of Interest closing 19th March @ 5pm",
+      "valuation_changed": true,
+      "before": {
+        "date": "2026-02-15T10:00:00+10:00",
+        "low": "$1.45M",
+        "mid": "$1.65M",
+        "high": "$1.85M",
+        "accuracy": "high",
+        "screenshot": "28-federal-place-robina-qld-4226/after-valuation.png"
+      },
+      "after": {
+        "date": "2026-03-15T14:25:00+10:00",
+        "low": "$1.72M",
+        "mid": "$2M",
+        "high": "$2.28M",
+        "accuracy": "high",
+        "screenshot": "28-federal-place-robina-qld-4226/after-valuation.png"
+      }
+    },
+    {
+      "address": "18 Anglesea Court, Robina, QLD 4226",
+      "suburb": "robina",
+      "slug": "18-anglesea-court-robina-qld-4226",
+      "listing_url": null,
+      "listing_price": "Sold in 2026",
+      "valuation_changed": true,
+      "before": {
+        "date": "2026-01-15T10:00:00+10:00",
+        "low": "$1.30M",
+        "mid": "$1.50M",
+        "high": "$1.70M",
+        "accuracy": "high",
+        "screenshot": "18-anglesea-court-robina-qld-4226/before-valuation.png"
+      },
+      "after": {
+        "date": "2026-03-15T14:26:00+10:00",
+        "low": "$1.55M",
+        "mid": "$1.80M",
+        "high": "$2.05M",
+        "accuracy": "high",
+        "screenshot": "18-anglesea-court-robina-qld-4226/before-valuation.png"
+      }
+    }
+  ],
+  "monitored": [
+    {
+      "address": "42 Florabella Drive, Robina, QLD 4226",
+      "suburb": "robina",
+      "status": "monitoring",
+      "baseline_valuation": "$1.35M",
+      "baseline_date": "2026-03-15T08:00:00+10:00"
+    },
+    {
+      "address": "10 Prahran Court, Robina, QLD 4226",
+      "suburb": "robina",
+      "status": "monitoring",
+      "baseline_valuation": "$950K",
+      "baseline_date": "2026-03-15T08:00:00+10:00"
+    }
+  ]
+}
