@@ -1,0 +1,5 @@
+node_modules/
+screenshots/
+progress.json
+progress.json.tmp
+export/
